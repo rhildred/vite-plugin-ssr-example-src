@@ -6,20 +6,7 @@ export { PageLayout };
 function PageLayout({ children }) {
   return (
     <React.StrictMode>
-      <Layout>
-        <Sidebar>
-          <a className="navitem" href="/">
-            Home
-          </a>
-          <a className="navitem" href="/about">
-            About
-          </a>
-          <a className="navitem" href="/contact">
-            Contact
-          </a>
-        </Sidebar>
-        <Content>{children}</Content>
-      </Layout>
+      {children}      
     </React.StrictMode>
   );
 }
@@ -38,35 +25,4 @@ function Layout({ children }) {
   );
 }
 
-function Sidebar({ children }) {
-  return (
-    <div
-      style={{
-        padding: 20,
-        paddingTop: 42,
-        flexShrink: 0,
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        lineHeight: '1.8em',
-      }}
-    >
-      {children}
-    </div>
-  );
-}
 
-function Content({ children }) {
-  return (
-    <div
-      style={{
-        padding: 20,
-        paddingBottom: 50,
-        borderLeft: '2px solid #eee',
-        minHeight: '100vh',
-      }}
-    >
-      {children}
-    </div>
-  );
-}

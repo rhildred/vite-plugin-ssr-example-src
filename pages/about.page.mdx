@@ -3,9 +3,14 @@ import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
 import IconButton from '@mui/material/IconButton';
 import InfoIcon from '@mui/icons-material/Info';
+import Header from '../components/Header.mdx';
+import Main from '../components/Main.jsx';
+import Footer from '../components/Footer.mdx';
+export const documentProps = { title: 'About'};
 export const itemData=[{id:1, img:"https://placekitten.com/640/360", title:"cute kitten", author:"The kitty did it"},{id:2, img:"https://placekitten.com/640/360", title:"another cute kitten", author:"The kitty did this one 2"}];
 
-
+<Header />
+<Main>
 # About
 
 ## ... also this
@@ -36,3 +41,5 @@ I also hope it works!
     </ImageListItem>
   ))}
 </ImageList>
+</Main>
+<Footer />

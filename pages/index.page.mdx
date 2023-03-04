@@ -1,13 +1,20 @@
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
+import Header from '../components/Header.mdx';
+import Main from '../components/Main.jsx';
+import Footer from '../components/Footer.mdx';
 export const documentProps = { title: 'Some Markdown Page'};
 
-# This is a page
+<Header />
+<Main>
+    # This is a page
 
-## ... renders
+    ## ... renders
 
-I hope!
+    I hope!
 
-<Box component="span" sx={{ p: 2, border: '1px dashed grey' }}>
-    <Button>Save</Button>
-</Box>
+    <Box component="span" sx={{ p: 2, border: '1px dashed grey' }}>
+        <Button>Save</Button>
+    </Box>
+</Main>
+<Footer />
