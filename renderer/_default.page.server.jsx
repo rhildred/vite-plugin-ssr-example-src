@@ -1,7 +1,7 @@
 import React from 'react';
 import { renderToStream } from 'react-streaming/server';
 import { escapeInject } from 'vite-plugin-ssr';
-import { PageLayout } from './PageLayout';
+import { PageLayout } from '../components/PageLayout';
 
 export { render };
 export { passToClient };
@@ -25,7 +25,7 @@ async function render(pageContext) {
         <title>${documentProps.title}</title>
       </head>
       <body>
-        ${stream}
+        <div id="page-view">${stream}</div>
       </body>
     </html>`;
 }
